@@ -151,7 +151,7 @@ class CRM_Member_BAO_Membership extends CRM_Member_DAO_Membership {
           [
             'subject' => "Status changed from {$allStatus[$oldStatus]} to {$allStatus[$membership->status_id]}",
             'source_contact_id' => $membershipLog['modified_id'],
-            'priority_id' => 'Normal',
+            'priority_id' => '2',
           ]
         );
       }
@@ -163,7 +163,7 @@ class CRM_Member_BAO_Membership extends CRM_Member_DAO_Membership {
           [
             'subject' => "Type changed from {$membershipTypes[$oldType]} to {$membershipTypes[$membership->membership_type_id]}",
             'source_contact_id' => $membershipLog['modified_id'],
-            'priority_id' => 'Normal',
+            'priority_id' => '2',
           ]
         );
       }
@@ -1235,7 +1235,7 @@ AND civicrm_membership.is_test = %2";
         [
           'subject' => "Status changed from {$allStatus[$oldStatus]} to {$allStatus[$status['id']]}",
           'source_contact_id' => $logParams['modified_id'],
-          'priority_id' => 'Normal',
+          'priority_id' => '2',
         ]
       );
 
